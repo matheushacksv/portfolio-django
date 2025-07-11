@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Meu Portfólio {% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Sobre mim</h1>
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="{% static 'img/perfil.jpg' %}" alt="Matheus" class="profile-photo" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #2563eb;">
+            </div>
+            <div class="profile-text">
+                <p>Olá, meu nome é Matheus, sou desenvolvedor Python apaixonado por criar soluções inovadoras e eficientes. Tenho experiência em desenvolvimento web, automação e análise de dados.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Habilidades</h2>
+        <ul style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            {% for chave, habilidade in habilidades.items %}
+                <li style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.5rem 1rem; margin: 0;">{{habilidade.nome}}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Contatos</h2>
+        <p>Email: matheushacksv@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/matheus-hack" target="_blank">linkedin.com/in/matheus-hack</a></p>
+        <p>GitHub: <a href="https://github.com/matheushack" target="_blank">github.com/matheushack</a></p>
+    </section>
+{% endblock %}

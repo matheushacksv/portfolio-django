@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{projeto.titulo}} | Meu Portfólio{% endblock %}
+
+{% block content %}
+    <div class="breadcrumb">
+        <a href="{% url 'lista_projetos' %}">Projetos</a> / <span>{{projeto.titulo}}</span>
+    </div>
+
+    <section class="project-detail">
+        <h1>{{projeto.titulo}}</h1>
+        
+        <div class="project-detail-content">
+            <div class="project-main">
+                <div class="detail-section">
+                    <h3>Detalhes do projeto</h3>
+                    <p>{{projeto.descricao}}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Tecnologias</h3>
+                    <div class="tech-tags">
+                        <p class="tech-list">{{projeto.tecnologia}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-sidebar">
+                <div class="detail-section">
+                    <h3>Links</h3>
+                    <div class="project-links">
+                        <a href="{{projeto.github}}" class="btn btn-primary" target="_blank">
+                            <span>🐙</span> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
