@@ -39,6 +39,6 @@ projetos = {
         'titulo': 'Portfolio',
         'descricao': 'Este portfolio foi totalmente feito em django, python e HTML 😉',
         'tecnologia': 'Python, Django, HTML',
-        'github': '',
+        'github': 'https://github.com/matheushacksv/portfolio-django',
     }
 }
